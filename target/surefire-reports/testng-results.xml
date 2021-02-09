@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="52978" started-at="2021-02-09T14:01:58 EET" finished-at="2021-02-09T14:02:51 EET">
+    <groups>
+      <group name="Regression">
+        <method signature="BasicTests.openPreferencePage()[pri:1, instance:AppiumStructure.MavenJava.BasicTests@11438d26]" name="openPreferencePage" class="AppiumStructure.MavenJava.BasicTests"/>
+      </group> <!-- Regression -->
+      <group name="Smoke">
+        <method signature="BasicTests.addWifiSettingPreference()[pri:0, instance:AppiumStructure.MavenJava.BasicTests@11438d26]" name="addWifiSettingPreference" class="AppiumStructure.MavenJava.BasicTests"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test name="Test" duration-ms="52978" started-at="2021-02-09T14:01:58 EET" finished-at="2021-02-09T14:02:51 EET">
+      <class name="AppiumStructure.MavenJava.BasicTests">
+        <test-method status="PASS" signature="startEmulator()[pri:0, instance:AppiumStructure.MavenJava.BasicTests@11438d26]" name="startEmulator" is-config="true" duration-ms="15" started-at="2021-02-09T14:01:58 EET" finished-at="2021-02-09T14:01:58 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startEmulator -->
+        <test-method status="PASS" signature="startAppiumServer()[pri:0, instance:AppiumStructure.MavenJava.BasicTests@11438d26]" name="startAppiumServer" is-config="true" duration-ms="14644" started-at="2021-02-09T14:01:58 EET" finished-at="2021-02-09T14:02:13 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startAppiumServer -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:AppiumStructure.MavenJava.BasicTests@11438d26]" name="setup" is-config="true" duration-ms="19528" started-at="2021-02-09T14:02:13 EET" depends-on-methods="framework.Setup.startAppiumServer" finished-at="2021-02-09T14:02:33 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="addWifiSettingPreference()[pri:0, instance:AppiumStructure.MavenJava.BasicTests@11438d26]" name="addWifiSettingPreference" duration-ms="5499" started-at="2021-02-09T14:02:33 EET" finished-at="2021-02-09T14:02:38 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addWifiSettingPreference -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:AppiumStructure.MavenJava.BasicTests@11438d26]" name="tearDown" is-config="true" duration-ms="504" started-at="2021-02-09T14:02:38 EET" finished-at="2021-02-09T14:02:39 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="startAppiumServer()[pri:0, instance:AppiumStructure.MavenJava.BasicTests@11438d26]" name="startAppiumServer" is-config="true" duration-ms="2705" started-at="2021-02-09T14:02:39 EET" finished-at="2021-02-09T14:02:41 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startAppiumServer -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:AppiumStructure.MavenJava.BasicTests@11438d26]" name="setup" is-config="true" duration-ms="7409" started-at="2021-02-09T14:02:41 EET" depends-on-methods="framework.Setup.startAppiumServer" finished-at="2021-02-09T14:02:49 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="openPreferencePage()[pri:1, instance:AppiumStructure.MavenJava.BasicTests@11438d26]" name="openPreferencePage" duration-ms="1988" started-at="2021-02-09T14:02:49 EET" finished-at="2021-02-09T14:02:51 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPreferencePage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:AppiumStructure.MavenJava.BasicTests@11438d26]" name="tearDown" is-config="true" duration-ms="667" started-at="2021-02-09T14:02:51 EET" finished-at="2021-02-09T14:02:51 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- AppiumStructure.MavenJava.BasicTests -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
