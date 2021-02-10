@@ -36,7 +36,7 @@ public class Setup {
 		if (!Helper.isServerRunning(Environment.port)) {
 			appiumBuilder = new AppiumServiceBuilder();
 			appiumBuilder.withAppiumJS(new File(APPIUM_JS));
-			appiumBuilder.withIPAddress(Environment.URL);
+			appiumBuilder.withIPAddress("127.0.0.1");
 			appiumBuilder.usingPort(Environment.port);
 			appiumService = AppiumDriverLocalService.buildService(appiumBuilder);
 			appiumService.start();
