@@ -30,7 +30,7 @@ public class Setup {
 
 	@BeforeMethod()
 	protected AppiumDriverLocalService startAppiumServer() {
-		String APPIUM_JS = "C:\\Users\\robertc\\AppData\\Roaming\\npm\\node_modules\\appium\\lib";
+		String APPIUM_JS = "C:\\Users\\robertc\\AppData\\Roaming\\npm\\node_modules\\appium";
 
 //		appiumService = AppiumDriverLocalService.buildDefaultService();
 		if (!Helper.isServerRunning(Environment.port)) {
