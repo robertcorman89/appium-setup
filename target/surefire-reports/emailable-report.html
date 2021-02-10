@@ -9,11 +9,44 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">52,978</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num attn">2</td><td class="num">0</td><td class="num">0</td><td class="num">698</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">AppiumStructure.MavenJava.BasicTests</td><td><a href="#m0">addWifiSettingPreference</a></td><td rowspan="1">1612872153152</td><td rowspan="1">5499</td></tr><tr class="passedeven"><td><a href="#m1">openPreferencePage</a></td><td rowspan="1">1612872169277</td><td rowspan="1">1988</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">AppiumStructure.MavenJava.BasicTests</td><td><a href="#m0">startAppiumServer</a></td><td rowspan="1">1612884785456</td><td rowspan="1">667</td></tr><tr><th colspan="4">Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="5">AppiumStructure.MavenJava.BasicTests</td><td><a href="#m1">setup</a></td><td rowspan="2">1612884786131</td><td rowspan="2">-1612884786131</td></tr><tr class="skippedeven"><td><a href="#m2">setup</a></td></tr><tr class="skippedeven"><td><a href="#m3">startAppiumServer</a></td><td rowspan="1">1612884786131</td><td rowspan="1">-1612884786131</td></tr><tr class="skippedeven"><td><a href="#m4">tearDown</a></td><td rowspan="2">1612884786131</td><td rowspan="2">-1612884786131</td></tr><tr class="skippedeven"><td><a href="#m5">tearDown</a></td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">AppiumStructure.MavenJava.BasicTests</td><td><a href="#m6">addWifiSettingPreference</a></td><td rowspan="1">1612884786128</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m7">openPreferencePage</a></td><td rowspan="1">1612884786131</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">AppiumStructure.MavenJava.BasicTests#addWifiSettingPreference</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">AppiumStructure.MavenJava.BasicTests#openPreferencePage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">AppiumStructure.MavenJava.BasicTests#startAppiumServer</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at &apos;C:\WINDOWS\system32\config\systemprofile\AppData\Roaming\npm\node_modules\appium\build\lib\main.js&apos;
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findMainScript(AppiumServiceBuilder.java:157)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.loadPathToMainScript(AppiumServiceBuilder.java:296)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:313)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:358)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:91)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:87)
+	at framework.Setup.startAppiumServer(Setup.java:30)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">AppiumStructure.MavenJava.BasicTests#setup</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">AppiumStructure.MavenJava.BasicTests#setup</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">AppiumStructure.MavenJava.BasicTests#startAppiumServer</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">AppiumStructure.MavenJava.BasicTests#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">AppiumStructure.MavenJava.BasicTests#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">AppiumStructure.MavenJava.BasicTests#addWifiSettingPreference</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at &apos;C:\WINDOWS\system32\config\systemprofile\AppData\Roaming\npm\node_modules\appium\build\lib\main.js&apos;
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findMainScript(AppiumServiceBuilder.java:157)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.loadPathToMainScript(AppiumServiceBuilder.java:296)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:313)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:358)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:91)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:87)
+	at framework.Setup.startAppiumServer(Setup.java:30)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">AppiumStructure.MavenJava.BasicTests#openPreferencePage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.appium.java_client.service.local.InvalidServerInstanceException: The main Appium script does not exist at &apos;C:\WINDOWS\system32\config\systemprofile\AppData\Roaming\npm\node_modules\appium\build\lib\main.js&apos;
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findMainScript(AppiumServiceBuilder.java:157)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.loadPathToMainScript(AppiumServiceBuilder.java:296)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:313)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:358)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:91)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:87)
+	at framework.Setup.startAppiumServer(Setup.java:30)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

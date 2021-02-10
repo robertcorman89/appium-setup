@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 9, 2021 02:02:52 PM</span></a>
+<a href="#"><span class="badge badge-primary">Feb 9, 2021 05:33:06 PM</span></a>
 </li>
 </ul>
 </div>
@@ -71,7 +71,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -79,71 +79,32 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">Smoke</a><a class="dropdown-item" href="#">Regression</a>
+<a class="dropdown-item" href="#">Regression</a><a class="dropdown-item" href="#">Smoke</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
-          author=""
-          tag="Smoke"
-          device="">
-          <div class="test-detail">
-            <p class="name">addWifiSettingPreference</p>
-            <p class="text-sm">
-              <span>14:02:52 PM</span> / <span>00:00:00:007</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">addWifiSettingPreference</h5>
-<span class='badge badge-success'>02.09.2021 14:02:52</span>
-<span class='badge badge-danger'>02.09.2021 14:02:52</span>
-<span class='badge badge-default'>00:00:00:007</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
-</div>
-<div class="m-t-15"><span class="badge badge-pill badge-default">Smoke</span></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>2:02:52 PM</td>
-        <td>
-          Test passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="2"
+        <li class="test-item"  status="skip" test-id="1"
           author=""
           tag="Regression"
           device="">
           <div class="test-detail">
             <p class="name">openPreferencePage</p>
             <p class="text-sm">
-              <span>14:02:52 PM</span> / <span>00:00:00:000</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>17:33:06 PM</span> / <span>00:00:00:005</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">openPreferencePage</h5>
-<span class='badge badge-success'>02.09.2021 14:02:52</span>
-<span class='badge badge-danger'>02.09.2021 14:02:52</span>
-<span class='badge badge-default'>00:00:00:000</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<h5 class="test-status text-skip">openPreferencePage</h5>
+<span class='badge badge-success'>02.09.2021 17:33:06</span>
+<span class='badge badge-danger'>02.09.2021 17:33:06</span>
+<span class='badge badge-default'>00:00:00:005</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span></div>
 </div>
@@ -152,10 +113,49 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>2:02:52 PM</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:33:06 PM</td>
         <td>
-          Test passed
+          The main Appium script does not exist at 'C:\WINDOWS\system32\config\systemprofile\AppData\Roaming\npm\node_modules\appium\build\lib\main.js'
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="2"
+          author=""
+          tag="Smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">addWifiSettingPreference</p>
+            <p class="text-sm">
+              <span>17:33:06 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">addWifiSettingPreference</h5>
+<span class='badge badge-success'>02.09.2021 17:33:06</span>
+<span class='badge badge-danger'>02.09.2021 17:33:06</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Smoke</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>5:33:06 PM</td>
+        <td>
+          The main Appium script does not exist at 'C:\WINDOWS\system32\config\systemprofile\AppData\Roaming\npm\node_modules\appium\build\lib\main.js'
         </td>
       </tr>
   </tbody>
@@ -183,15 +183,15 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-skip'>1</span>
 </span>
-<p class="name">Smoke</p>
+<p class="name">Regression</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>Smoke</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<h4>Regression</h4>
+<span status="skip" class='badge log badge-skip'>1 skipped</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -202,11 +202,11 @@
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>14:02:52 PM</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:33:06 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='1'>addWifiSettingPreference</a>
+<a href="#" class="linked" test-id='1' id='1'>openPreferencePage</a>
 </td>
 </tr>
 </tbody>
@@ -216,15 +216,15 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-skip'>1</span>
 </span>
-<p class="name">Regression</p>
+<p class="name">Smoke</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>Regression</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<h4>Smoke</h4>
+<span status="skip" class='badge log badge-skip'>1 skipped</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -235,11 +235,11 @@
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>14:02:52 PM</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>17:33:06 PM</td>
 <td>
-<a href="#" class="linked" test-id='2' id='2'>openPreferencePage</a>
+<a href="#" class="linked" test-id='2' id='2'>addWifiSettingPreference</a>
 </td>
 </tr>
 </tbody>
@@ -259,19 +259,19 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 9, 2021 02:02:52 PM</h3>
+<h3>Feb 9, 2021 05:33:06 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 9, 2021 02:02:52 PM</h3>
+<h3>Feb 9, 2021 05:33:06 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>2</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -293,13 +293,13 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>2</b> tests passed
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
 </small>
 </div>
 <div>
 <small data-tooltip='0%'><b>0</b> tests failed,
-<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+<b>2</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
@@ -316,10 +316,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>2</b> events passed</small></div>
+<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>0</b> others
+<b data-tooltip='%'>2</b> others
 </small>
 </div>
 </div>
@@ -335,7 +335,7 @@
 </div></div>
 <script>
 var timeline = {
-"addWifiSettingPreference":0.007,"openPreferencePage":0
+"openPreferencePage":0.005,"addWifiSettingPreference":0
 };
 </script>
 <div class="row">
@@ -345,20 +345,20 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>Smoke</td>
+<td>Regression</td>
+<td>0</td>
+<td>0</td>
 <td>1</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
+<td>0%</td>
 </tr>
 <tr>
-<td>Regression</td>
+<td>Smoke</td>
+<td>0</td>
+<td>0</td>
 <td>1</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
+<td>0%</td>
 </tr>
 </tbody>
 </table></div>
@@ -369,10 +369,10 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 2,
+passParent: 0,
 failParent: 0,
 warningParent: 0,
-skipParent: 0,
+skipParent: 2,
 childCount: 5,
 passChild: 0,
 failChild: 0,
@@ -386,10 +386,10 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 2,
+passEvents: 0,
 failEvents: 0,
 warningEvents: 0,
-skipEvents: 0,
+skipEvents: 2,
 infoEvents: 0
 };
 </script>        </div>

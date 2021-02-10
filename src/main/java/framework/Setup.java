@@ -1,5 +1,6 @@
 package framework;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -14,10 +15,12 @@ import framework.data.Environment;
 import framework.utils.Helper;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 public class Setup {
 
 	public static AppiumDriverLocalService appiumService;
+	public static AppiumServiceBuilder appiumBuilder;
 	protected AndroidDriver<WebElement> driver;
 
 	@BeforeSuite()
@@ -27,8 +30,14 @@ public class Setup {
 
 	@BeforeMethod()
 	protected AppiumDriverLocalService startAppiumServer() {
-		appiumService = AppiumDriverLocalService.buildDefaultService();
+		String APPIUM_JS = "C:\\Users\\robertc\\AppData\\Roaming\\npm\\node_modules\\appium\\lib";
+
+//		appiumService = AppiumDriverLocalService.buildDefaultService();
 		if (!Helper.isServerRunning(Environment.port)) {
+			appiumBuilder.withAppiumJS(new File(APPIUM_JS));
+			appiumBuilder.withIPAddress(Environment.URL);
+			appiumBuilder.usingPort(Environment.port);
+			appiumService = AppiumDriverLocalService.buildService(appiumBuilder);
 			appiumService.start();
 		}
 		return appiumService;
