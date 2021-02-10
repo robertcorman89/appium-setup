@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
+//import org.testng.annotations.BeforeSuite;
 
 import framework.data.Environment;
 import framework.utils.Helper;
@@ -23,12 +23,12 @@ public class Setup {
 	public static AppiumServiceBuilder appiumBuilder;
 	protected AndroidDriver<WebElement> driver;
 
-	@BeforeSuite()
+	@BeforeMethod()
 	protected void startEmulator() throws IOException {
 		Helper.runSystemFile(System.getProperty("user.dir") + "\\src\\main\\java\\resources\\startEmulator.bat");
 	}
 
-	@BeforeMethod()
+	@BeforeMethod(dependsOnMethods = "startEmulator")
 	protected AppiumDriverLocalService startAppiumServer() {
 		String APPIUM_JS = "C:\\Users\\robertc\\AppData\\Roaming\\npm\\node_modules\\appium";
 
