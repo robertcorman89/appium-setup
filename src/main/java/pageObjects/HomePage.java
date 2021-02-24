@@ -18,7 +18,7 @@ public class HomePage extends Initializer {
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text = 'Accessibility']")
 	public WebElement accesibility;
 
-	@AndroidFindBy(id = "com.datamine.discovermobile:id/open_project")
+	@AndroidFindBy(id = "")
 	public WebElement openProject;
 
 	public Preferences clickPreferencesOption() {
