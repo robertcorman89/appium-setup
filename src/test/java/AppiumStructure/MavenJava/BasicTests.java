@@ -6,27 +6,39 @@ import org.testng.annotations.Test;
 
 import framework.Setup;
 import pageObjects.HomePage;
-import pageObjects.Preferences;
 
 public class BasicTests extends Setup {
 
 	@Test(groups = "Smoke")
 	public void addWifiSettingPreference() {
-		String wifiName = "New Wi-fi";
+		System.out.println("Merge");
 		HomePage homePage = new HomePage(driver);
-		Preferences preferencesPage = homePage.clickPreferencesOption();
-		preferencesPage.preferenceDependencies.click();
-		preferencesPage.wiFiCheckbox.click();
-		preferencesPage.wiFiSettingsOption.click();
-		preferencesPage.wiFiSettingsInput.sendKeys(wifiName);
-		preferencesPage.clickOkButton();
-		Assert.assertTrue(preferencesPage.wiFiSettingsOption.isDisplayed());
+		homePage.openProject.click();
+		Assert.assertTrue(true);
 	}
 
-	@Test(groups = "Regression", priority = 1)
-	public void openPreferencePage() throws MalformedURLException, InterruptedException {
+	@Test(groups = "Smoke")
+	public void addWifiSettingPreference0() {
+		System.out.println("Merge");
 		HomePage homePage = new HomePage(driver);
-		Preferences preferencesPage = homePage.clickPreferencesOption();
-		Assert.assertTrue(preferencesPage.preferenceDependencies.isDisplayed());
+		homePage.openProject.click();
+		Assert.assertTrue(false);
+	}
+	@Test(groups = "Smoke")
+	public void addWifiSettingPreference1() {
+		System.out.println("Merge");
+		HomePage homePage = new HomePage(driver);
+		homePage.openProject.click();
+		Assert.assertTrue(true);
+	}
+	@Test(groups = "Smoke")
+	public void addWifiSettingPreference2() {
+		System.out.println("Merge");
+		HomePage homePage = new HomePage(driver);
+		homePage.openProject.click();
+		Assert.assertTrue(true);
+	}
+//	@Test(groups = "Regression", priority = 1)
+	public void openPreferencePage() throws MalformedURLException, InterruptedException {
 	}
 }

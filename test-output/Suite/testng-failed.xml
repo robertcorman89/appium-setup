@@ -9,11 +9,10 @@
     <classes>
       <class name="AppiumStructure.MavenJava.BasicTests">
         <methods>
+          <include name="addWifiSettingPreference0"/>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="startEmulator"/>
-          <include name="openPreferencePage"/>
-          <include name="addWifiSettingPreference"/>
+          <include name="setupCapabilities"/>
           <include name="startAppiumServer"/>
         </methods>
       </class> <!-- AppiumStructure.MavenJava.BasicTests -->

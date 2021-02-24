@@ -2,14 +2,14 @@ package framework;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.junit.BeforeClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-//import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeSuite;
 
 import framework.data.Environment;
 import framework.utils.Helper;
@@ -22,36 +22,37 @@ public class Setup {
 	public static AppiumDriverLocalService appiumService;
 	public static AppiumServiceBuilder appiumBuilder;
 	protected AndroidDriver<WebElement> driver;
+	public DesiredCapabilities caps;
 
-	@BeforeMethod()
-	protected void startEmulator() throws IOException {
-		Helper.runSystemFile(System.getProperty("user.dir") + "\\src\\main\\java\\resources\\startEmulator.bat");
+	@BeforeSuite
+	public void setupCapabilities() {
+		System.out.println("=========================CAPABILITIES============================");
+		caps = Helper.setCapabilities(caps);
 	}
 
-	@BeforeMethod(dependsOnMethods = "startEmulator")
-	protected AppiumDriverLocalService startAppiumServer() {
-		String APPIUM_JS = "C:\\Users\\robertc\\AppData\\Roaming\\npm\\node_modules\\appium";
-
-//		appiumService = AppiumDriverLocalService.buildDefaultService();
-		if (!Helper.isServerRunning(Environment.port)) {
+	@BeforeMethod()
+	public AppiumDriverLocalService startAppiumServer() {
+		System.out.println("=========================APPIUM============================");
+		if (!Helper.isServerRunning(Environment.PORT)) {
 			appiumBuilder = new AppiumServiceBuilder();
-			appiumBuilder.withAppiumJS(new File(APPIUM_JS));
-			appiumBuilder.withIPAddress("127.0.0.1");
-			appiumBuilder.usingPort(Environment.port);
+			appiumBuilder.withAppiumJS(new File(Environment.APPIUM_JS_PATH));
+			appiumBuilder.withIPAddress(Environment.IP);
+			appiumBuilder.usingPort(Environment.PORT);
 			appiumService = AppiumDriverLocalService.buildService(appiumBuilder);
 			appiumService.start();
 		}
 		return appiumService;
 	}
 
-	@BeforeMethod(dependsOnMethods = { "startAppiumServer" })
-	public void setup() throws MalformedURLException {
-		DesiredCapabilities caps = Helper.setCapabilities();
-		driver = new AndroidDriver<>(new URL(Environment.URL + ":" + Environment.port + "/wd/hub"), caps);
+	@BeforeMethod(dependsOnMethods = "startAppiumServer")
+	public void setup() throws IOException, InterruptedException {
+		System.out.println("=========================SETUP============================");
+		driver = new AndroidDriver<>(new URL(Environment.URL + ":" + Environment.PORT + "/wd/hub"), caps);
 	}
 
 	@AfterMethod
-	public void tearDown() {
+	public void tearDown() throws IOException {
+		System.out.println("=========================TEARDOWN============================");
 		driver.quit();
 		appiumService.stop();
 	}

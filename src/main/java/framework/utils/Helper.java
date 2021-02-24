@@ -8,9 +8,9 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 import framework.data.Capabilities;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class Helper {
@@ -28,12 +28,13 @@ public class Helper {
 		return isServerRunning;
 	}
 
-	public static DesiredCapabilities setCapabilities() {
-		File appDirectory = new File("src/main/java/framework");
-		File appLocation = new File(appDirectory, Capabilities.appName);
-		DesiredCapabilities caps = new DesiredCapabilities();
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, Capabilities.deviceName);
+	public static DesiredCapabilities setCapabilities(DesiredCapabilities caps) {
+		File appDirectory = new File("src/main/java/resources");
+		File appLocation = new File(appDirectory, Capabilities.APP_NAME);
+		caps = new DesiredCapabilities();
 		caps.setCapability(MobileCapabilityType.APP, appLocation.getAbsolutePath());
+		caps.setCapability(AndroidMobileCapabilityType.APP_WAIT_ACTIVITY, Capabilities.APP_ACTIVITY);
+		caps.setCapability(AndroidMobileCapabilityType.AVD, Capabilities.EMULATOR_NAME);
 		return caps;
 	}
 
