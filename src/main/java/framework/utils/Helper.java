@@ -35,6 +35,7 @@ public class Helper {
 		caps.setCapability(MobileCapabilityType.APP, appLocation.getAbsolutePath());
 		caps.setCapability(AndroidMobileCapabilityType.APP_WAIT_ACTIVITY, Capabilities.APP_ACTIVITY);
 		caps.setCapability(AndroidMobileCapabilityType.AVD, Capabilities.EMULATOR_NAME);
+		caps.setCapability(AndroidMobileCapabilityType.AVD_READY_TIMEOUT, 30000);
 		return caps;
 	}
 

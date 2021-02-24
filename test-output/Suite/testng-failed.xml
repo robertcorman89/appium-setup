@@ -12,8 +12,8 @@
           <include name="addWifiSettingPreference0"/>
           <include name="setup"/>
           <include name="tearDown"/>
+          <include name="stopAppiumServer"/>
           <include name="setupCapabilities"/>
-          <include name="startAppiumServer"/>
         </methods>
       </class> <!-- AppiumStructure.MavenJava.BasicTests -->
     </classes>
